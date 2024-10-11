@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Notacy (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Notacy (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Notacy.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Notacy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <DesktopAcrylicBackdrop />
+    </Window.SystemBackdrop>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="{ThemeResource SmokeFillColorDefault}" Grid.RowSpan="2"/>
+        <Grid Grid.Row="0" Background="{ThemeResource SubtleFillColorSecondaryBrush}">
+            <StackPanel Padding="12" Spacing="8" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Grid Width="18" Height="18">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE653;" FontSize="10" Foreground="{ThemeResource AccentFillColorDefaultBrush}"/>
+                    <Button Width="18" Background="#ff453a" CornerRadius="48" Height="18" Padding="0"/>
+                </Grid>
+
+                <Grid Width="18" Height="18">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE654;" FontSize="10" Foreground="{ThemeResource AccentFillColorDefaultBrush}"/>
+                    <Button Width="18" Background="#30d158" CornerRadius="48" Height="18" Padding="0"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="4" VerticalAlignment="Center">
+                <Image Source="ms-appx:///Assets/StoreLogo.png" Margin="4,12"/>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}" VerticalAlignment="Center">Notacy Valley</TextBlock>
+                <TextBlock Style="{ThemeResource BodyStrongTextBlockStyle}" VerticalAlignment="Center" Opacity="0.7">ALPHA</TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Padding="12,0">
+                <Button Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE74E;" FontSize="18"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <RichEditBox IsSpellCheckEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Margin="-2" Background="Transparent"
+                     Padding="20" FontSize="16"/>
+    </Grid> 
+</Window>
